@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASSEMBLEIA DE DEUS UNIDOS PARA CRISTO</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+<div class="container navbar">
+<div class="logo">
+    <img src="bash/logo.png" alt="Logo Assembleia de Deus Unidos para Cristo">
+    <span>ASSEMBLEIA DE DEUS UNIDOS PARA CRISTO</span>
+</div>
+
+<button class="menu-toggle" id="menu-toggle">☰</button>
+
+<nav id="nav-menu">
+<ul>
+<li><a href="#inicio">Início</a></li>
+<li><a href="#igreja">A Igreja</a></li>
+<li><a href="#cultos">Cultos</a></li>
+<li><a href="#fotos">Fotos</a></li>
+<li><a href="#videos">Vídeos</a></li>
+<li><a href="#contato">Contato</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<section id="inicio" class="hero">
+<div class="container">
+<h1>Bem-vindo à Casa do Senhor</h1>
+<p>Um lugar de fé, esperança e amor.</p>
+<a href="#igreja" class="hero-btn">Assembleia de Deus Unidos para Cristo - ADUC LONTRA</a>
+</div>
+</section>
+
+<section id="igreja" class="section">
+<div class="container">
+<h2>Sobre a Igreja</h2>
+<p>Somos uma comunidade cristã dedicada à pregação do evangelho e ao cuidado das famílias.</p>
+</div>
+</section>
+
+<section id="cultos" class="section">
+<div class="container">
+<h2>Horários de Culto</h2>
+<p>Domingo: 19:00h a 21:00h</p>
+<p>Quirta-feira: 19h30</p>
+<p>Sexta-feira: 19h30</p>
+<p>Sabado: 19h30</p>
+</div>
+</section>
+
+<section id="fotos" class="section">
+<div class="container">
+<h2>Galeria de Fotos</h2>
+<div class="gallery">
+
+<img src="fotos galeria/JOVENS.jpeg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto08.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto07.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto06.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto05.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto03.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto02.jpg" onclick="openModal(this.src)">
+<img src="fotos galeria/foto01.jpg" onclick="openModal(this.src)">
+</div>
+</div>
+</section>
+
+<section id="videos" class="section">
+<div class="container">
+<h2>Galeria de Vídeos</h2>
+<div class="gallery">
+<video src="videos/grupoo coreografia.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/congreso aduc.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/grupo de crianças.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/videos aviva.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/culto.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/video naty.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/retiro.mp4" onclick="openModal(this.src)"></video>
+<video src="videos/Videob.mp4" onclick="openModal(this.src)"></video>
+</div>
+</div>
+</section>
+
+<section id="contato" class="section">
+<div class="container">
+<h2>Contato</h2>
+
+<div class="contact-grid">
+
+<div class="contact-info">
+<p><strong>Email:</strong> contato@igreja.com</p>
+<p><strong>Telefone:</strong> (11) 99999-9999</p>
+<p><strong>Endereço:</strong> Rua Olimpio Campos, 68 - Centro</p>
+<p><strong>Cidade:</strong> Lontra - Minas Gerais</p>
+
+<a href="https://www.google.com/maps?q=Rua+Olimpio+Campos,+67,+Lontra,+MG" target="_blank" class="btn-map">
+Como Chegar
+</a>
+</div>
+
+<div class="map-container">
+<iframe src="https://www.google.com/maps/embed?pb=!4v1771288871694!6m8!1m7!1sneli-Gbc1skLYWU2GkkOEg!2m2!1d-15.90348662540891!2d-44.3026315118686!3f200.30673391355114!4f-1.5015879144008437!5f0.7820865974627469" 
+width="700" 
+height="350" 
+style="border:0;" 
+allowfullscreen="" 
+loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+ 
+</iframe>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<div id="modal" class="modal">
+<span class="modal-close" id="modal-close">&times;</span>
+<div id="modal-body"></div>
+</div>
+
+<footer>
+© 2026 Igreja Assembleia de Deus unidos para Cristo. Todos os direitos reservados.
+<P>Desenvolvido por Fleibson de Souza Madureira</P>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
