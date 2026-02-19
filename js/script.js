@@ -57,29 +57,6 @@ menuToggle.addEventListener("click", function () {
     navMenu.classList.toggle("active");
 });
 
-const menuToggle = document.querySelector(".menu-toggle");
-const nav = document.querySelector("nav");
-const overlay = document.querySelector(".overlay");
-
-menuToggle.addEventListener("click", () => {
-    nav.classList.toggle("active");
-    overlay.classList.toggle("active");
-});
-
-// Fecha ao clicar no overlay
-overlay.addEventListener("click", () => {
-    nav.classList.remove("active");
-    overlay.classList.remove("active");
-});
-
-// Fecha ao clicar em qualquer link
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", () => {
-        nav.classList.remove("active");
-        overlay.classList.remove("active");
-    });
-});
-
 document.addEventListener("DOMContentLoaded", function() {
 
   const menuToggle = document.querySelector(".menu-toggle");
