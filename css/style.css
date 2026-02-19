@@ -235,6 +235,29 @@ footer {
     }
 }
 
+/* ===== RESPONSIVO MOBILE ===== */
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 60px 15px;
+    min-height: 70vh;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.9rem;
+  }
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -317,34 +340,14 @@ footer {
 }
 
 
-/* ===== FORMULÁRIO ===== */
-.contact-form {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+/* ===== EXTRA SMALL (celulares menores) ===== */
+@media (max-width: 480px) {
 
-.contact-form input,
-.contact-form textarea {
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-family: 'Poppins', sans-serif;
-    font-size: 14px;
-}
+  .hero h1 {
+    font-size: 1.6rem;
+  }
 
-.contact-form button {
-    padding: 12px;
-    border: none;
-    background: #1e3a8a;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    background: #142a66;
+  .hero p {
+    font-size: 0.9rem;
+  }
 }
