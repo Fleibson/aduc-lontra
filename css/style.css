@@ -326,3 +326,56 @@ footer {
         height: 200px;
     }
 }
+
+/* ================= MENU MOBILE SLIDE ================= */
+
+@media (max-width: 900px) {
+
+    .menu-toggle {
+        display: block;
+        z-index: 11000;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 260px;
+        height: 100vh;
+        background: #ffffff;
+        box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+        padding-top: 100px;
+        transition: 0.4s ease-in-out;
+        z-index: 10500;
+    }
+
+    nav.active {
+        right: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 25px;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    /* Overlay escuro */
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        z-index: 10400;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+}
