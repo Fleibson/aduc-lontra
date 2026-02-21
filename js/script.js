@@ -9,24 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (modal && modalBody && modalClose) {
 
-        // Abrir modal
         function openModal(src) {
             modalBody.innerHTML = "";
 
-            // Verifica se é vídeo (.mp4)
             if (src.toLowerCase().endsWith(".mp4")) {
                 const video = document.createElement("video");
                 video.src = src;
                 video.controls = true;
                 video.autoplay = true;
                 video.playsInline = true;
-                video.classList.add("modal-body-content");
                 modalBody.appendChild(video);
             } else {
                 const img = document.createElement("img");
                 img.src = src;
                 img.alt = "Imagem ampliada";
-                img.classList.add("modal-body-content");
                 modalBody.appendChild(img);
             }
 
@@ -34,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "hidden";
         }
 
-        // Fechar modal
         function closeModal() {
             const video = modalBody.querySelector("video");
             if (video) {
@@ -47,24 +42,20 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "auto";
         }
 
-        // Botão X
         modalClose.addEventListener("click", closeModal);
 
-        // Clique fora fecha
         modal.addEventListener("click", function (e) {
             if (e.target === modal) {
                 closeModal();
             }
         });
 
-        // Tecla ESC fecha
         document.addEventListener("keydown", function (e) {
             if (e.key === "Escape" && modal.classList.contains("active")) {
                 closeModal();
             }
         });
 
-        // Torna função global para uso no HTML (onclick)
         window.openModal = openModal;
     }
 
@@ -74,8 +65,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const navMenu = document.getElementById("nav-menu");
 
     if (menuToggle && navMenu) {
-        menuToggle.addEventListener("click", function () {
+
+        // Abrir / fechar menu
+        menuToggle.addEventListener("click", function (e) {
+            e.stopPropagation(); // evita conflito
             navMenu.classList.toggle("active");
+        });
+
+        // Fecha menu ao clicar em um link
+        const navLinks = navMenu.querySelectorAll("a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function () {
+                navMenu.classList.remove("active");
+            });
+        });
+
+        // Fecha ao clicar fora
+        document.addEventListener("click", function (e) {
+            if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+                navMenu.classList.remove("active");
+            }
         });
     }
 
