@@ -1,7 +1,14 @@
-* {
+/* ================= RESET GLOBAL ================= */
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html {
     scroll-behavior: smooth;
 }
 
@@ -9,12 +16,13 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #f4f6f9;
     color: #333;
+    line-height: 1.6;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 /* ================= HEADER ================= */
@@ -35,7 +43,8 @@ header {
     height: 90px;
 }
 
-/* LOGO */
+/* ================= LOGO ================= */
+
 .logo {
     display: flex;
     align-items: center;
@@ -47,9 +56,11 @@ header {
 .logo img {
     height: 70px;
     width: auto;
+    display: block;
 }
 
-/* MENU */
+/* ================= MENU ================= */
+
 .menu-toggle {
     display: none;
     font-size: 28px;
@@ -69,6 +80,11 @@ nav ul li a {
     color: #444;
     font-weight: 500;
     position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #4e73df;
 }
 
 nav ul li a::after {
@@ -79,7 +95,7 @@ nav ul li a::after {
     position: absolute;
     left: 0;
     bottom: -6px;
-    transition: 0.3s;
+    transition: width 0.3s ease;
 }
 
 nav ul li a:hover::after {
@@ -92,7 +108,7 @@ nav ul li a:hover::after {
     padding: 120px 20px;
     text-align: center;
     background: linear-gradient(135deg, #4e73df, #8aa9e4);
-    color: white;
+    color: #fff;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
 }
@@ -108,13 +124,18 @@ nav ul li a:hover::after {
 }
 
 .hero .hero-btn {
-    background: white;
+    background: #fff;
     color: #4e73df;
     padding: 12px 28px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
     display: inline-block;
+    transition: 0.3s ease;
+}
+
+.hero .hero-btn:hover {
+    transform: translateY(-3px);
 }
 
 /* ================= SECTIONS ================= */
@@ -144,7 +165,7 @@ nav ul li a:hover::after {
     object-fit: cover;
     border-radius: 15px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
 }
 
 .gallery img:hover,
@@ -177,8 +198,6 @@ nav ul li a:hover::after {
     max-height: 90vh;
     border-radius: 10px;
 }
-
-/* ❌ REMOVIDO: controls: true; (propriedade inválida CSS) */
 
 .modal-close {
     position: fixed;
@@ -213,7 +232,7 @@ nav ul li a:hover::after {
     color: #fff;
     text-decoration: none;
     border-radius: 8px;
-    transition: 0.3s;
+    transition: background 0.3s ease;
 }
 
 .btn-map:hover {
@@ -241,8 +260,8 @@ footer {
     color: #cbd5e1;
     padding: 60px 20px 20px;
     text-align: center;
-    border-top-right-radius: 60px;  
     border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
 }
 
 /* ===================================================== */
@@ -326,5 +345,3 @@ footer {
         height: 200px;
     }
 }
-
-
