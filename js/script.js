@@ -89,3 +89,32 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+
+
+async function carregarVersiculo() {
+    try {
+        // API pública gratuita
+        const resposta = await fetch("https://bible-api.com/?random=verse&translation=almeida");
+        const dados = await resposta.json();
+
+        document.getElementById("versiculo-texto").innerText = `"${dados.text}"`;
+        document.getElementById("versiculo-ref").innerText = dados.reference;
+
+    } catch (erro) {
+        document.getElementById("versiculo-texto").innerText =
+            "Não foi possível carregar o versículo.";
+    }
+}
+
+carregarVersiculo();
+
+const versiculos365 = [
+    { ref: "Salmos 23:1", texto: "O Senhor é o meu pastor; nada me faltará." },
+    { ref: "João 3:16", texto: "Porque Deus amou o mundo de tal maneira..." },
+    { ref: "Filipenses 4:13", texto: "Tudo posso naquele que me fortalece." },
+    { ref: "Salmos 37:5", texto: "Entrega o teu caminho ao Senhor..." },
+    { ref: "Romanos 8:28", texto: "Sabemos que todas as coisas cooperam para o bem..." },
+
+    // 👉 Aqui você pode continuar até completar 365
+];
+

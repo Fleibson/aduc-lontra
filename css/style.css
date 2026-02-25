@@ -30,9 +30,9 @@ body {
 header {
     position: sticky;
     top: 0;
-    background: rgba(255,255,255,0.95);
+    background: rgba(253, 253, 253, 0.95);
     backdrop-filter: blur(12px);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 20px rgba(173, 8, 8, 0.05);
     z-index: 1000;
 }
 
@@ -54,7 +54,7 @@ header {
 }
 
 .logo img {
-    height: 70px;
+    height: 80px;
     width: auto;
     display: block;
 }
@@ -105,7 +105,7 @@ nav ul li a:hover::after {
 /* ================= HERO ================= */
 
 .hero {
-    padding: 120px 20px;
+    padding:30px 20px;
     text-align: center;
     background: linear-gradient(135deg, #4e73df, #8aa9e4);
     color: #fff;
@@ -137,6 +137,12 @@ nav ul li a:hover::after {
 .hero .hero-btn:hover {
     transform: translateY(-3px);
 }
+
+.quote{
+background:#1d3557;
+color:#fff;
+text-align:center;
+padding:40px 20px}
 
 /* ================= SECTIONS ================= */
 
@@ -172,6 +178,7 @@ nav ul li a:hover::after {
 .gallery video:hover {
     transform: scale(1.05);
 }
+
 
 /* ================= MODAL ================= */
 
