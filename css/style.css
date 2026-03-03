@@ -102,6 +102,33 @@ nav ul li a:hover::after {
     width: 100%;
 }
 
+
+
+/* CARD PROPORCIONAL E CENTRALIZADO */
+#eventos .evento-card{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+
+    width:50%;      /* largura equilibrada */
+    margin:0 auto;  /* centraliza */
+}
+
+/* IMAGEM PROPORCIONAL AO CARD */
+#eventos .evento-card img{
+    width:100%;     /* ocupa todo o card */
+    height:auto;    /* mantém proporção real */
+    display:block;
+    margin-bottom:10px;
+    border-radius:15px;
+}
+
+
+
+
 /* ================= HERO ================= */
 
 .hero {
