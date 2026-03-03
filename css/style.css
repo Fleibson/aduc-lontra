@@ -103,7 +103,6 @@ nav ul li a:hover::after {
 }
 
 
-
 /* CARD PROPORCIONAL E CENTRALIZADO */
 #eventos .evento-card{
     background:#fff;
@@ -125,9 +124,6 @@ nav ul li a:hover::after {
     margin-bottom:10px;
     border-radius:15px;
 }
-
-
-
 
 /* ================= HERO ================= */
 
@@ -378,4 +374,23 @@ footer {
     .gallery video {
         height: 200px;
     }
+}
+
+/* ========================= */
+/* AJUSTE SOMENTE PARA MOBILE */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    #eventos .evento-card{
+        width:90%;          /* ocupa quase toda a tela */
+        margin:0 auto 20px; /* centraliza e dá espaço abaixo */
+    }
+
+    #eventos .evento-card img{
+        width:100%;         /* imagem ocupa todo o card */
+        height:auto;        /* mantém proporção */
+        border-radius:12px;
+    }
+
 }
